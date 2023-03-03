@@ -1,9 +1,0 @@
-name: Github Action soulmouctar
-on:
-  - push
-jobs:
-  Mkdocs-project:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Clone repository"
-        uses: actions/checkout@v3
