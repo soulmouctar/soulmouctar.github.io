@@ -1,4 +1,4 @@
-name: Github Action Demo
+name: Github Action soulmouctar
 on:
   - push
 jobs:
