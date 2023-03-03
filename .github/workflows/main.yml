@@ -4,6 +4,7 @@ on:
 jobs:
   Mkdocs-project:
     runs-on: ubuntu-latest
+    permissions: read-all|write-all
     steps:
       - name: "Clone repository"
         uses: actions/checkout@v3
