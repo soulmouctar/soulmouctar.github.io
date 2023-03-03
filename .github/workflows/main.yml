@@ -1,6 +1,7 @@
 name: Github Action Demo
 on:
   - push
+permissions: write-all
 jobs:
   Mkdocs-project:
     runs-on: ubuntu-latest
