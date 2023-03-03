@@ -1,8 +1,7 @@
-name: Github Action soulmouctar
+name: Github Action Demo
 on:
   - push
 jobs:
-permissions: read-all|write-all
   Mkdocs-project:
     runs-on: ubuntu-latest
     steps:
@@ -12,10 +11,10 @@ permissions: read-all|write-all
       - name: "List repository files"
         run: "ls -al"
       - name: "Install python"
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - name: "Installing mkdocs"
+      - name: "Install mkdocs"
         run: pip install mkdocs
       - name: "Deploy project"
         run: mkdocs gh-deploy --force
