@@ -31,7 +31,7 @@ jobs:
       - name: "show all env"
         run: printenv
       - name: Login to docker
-        run: docker login -u ${{ secret.DOCKER_HUB_USERNAME }} -p ${{ secret.DOCKER_HUB_PASSWORD }}
+        run: docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
       - name: Building docker image
         run: docker build -t soulmouctar/bootcamp-devops:1.0.1
       - name: Build docker image
