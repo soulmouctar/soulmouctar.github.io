@@ -33,6 +33,6 @@ jobs:
       - name: Login to docker
         run: docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
       - name: Building docker image
-        run: docker build -t soulmouctar/bootcamp-devops:1.0.1
+        run: docker build -t soulmouctar/bootcamp-devops:1.0.1 .
       - name: Build docker image
         run: docker push soulmouctar/bootcamp-devops:1.0.1
