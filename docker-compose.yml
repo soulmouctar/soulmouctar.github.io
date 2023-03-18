@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+ site-web:
+  build: .
+  image: soulmouctar/bootcamp-devops:0.0.2
+  container_name: server-1
+  ports: 
+    - 8082:8000

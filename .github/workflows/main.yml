@@ -1,6 +1,13 @@
 name: Github Action Demo
 on:
-  - push
+  push:
+    branches:
+    - main
+    - dev
+  pull-request:
+    branches:
+    - main
+    - dev
 permissions: write-all
 jobs:
   Mkdocs-project:
@@ -23,3 +30,8 @@ jobs:
         run: echo "🎉 The job was successful."
       - name: "show all env"
         run: printenv
+      - name: Login to docker
+      - name: docker login -u ${{ secret.DOCKER_HUB_USERNAME }} -p ${{ secret.DOCKER_HUB_PASSWORD }}
+        run: docker build -t soulmouctar/bootcamp-devops:1.0.1
+      - name: Build docker image
+        run: docker push soulmouctar/bootcamp-devops:1.0.1
