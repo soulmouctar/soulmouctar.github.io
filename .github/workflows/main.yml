@@ -1,13 +1,13 @@
 name: Github Action Demo
 on:
-  - push:
-      branches:
-      - main
-      - dev
-  - pull_request:
-      branches:
-      - main
-      - dev
+  push:
+    branches:
+    - main
+    - dev
+  pull_request:
+    branches:
+    - main
+    - dev
 # permissions: write-all
 jobs:
   Mkdocs-project:
